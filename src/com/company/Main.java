@@ -142,11 +142,9 @@ public class Main {
     //Homework 7:
     static int[] alternate (int[] a) {
     int[] alternated_array = new int[a.length];
-    int j = 0;
-        for (int i = 0; i <= a.length / 2 && j < a.length; i++) {
-            alternated_array[j] = a[i];
-            alternated_array[j + 1] = a[a.length - 1 - i];
-            j = j + 2;
+        for (int i = 0; i < a.length / 2; i++) {
+            alternated_array[2 * i] = a[i];
+            alternated_array[2 * i + 1] = a[a.length - 1 - i];
         }
 
     return alternated_array;
